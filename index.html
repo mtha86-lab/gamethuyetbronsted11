@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a1026">
+<title>Phòng thí nghiệm Proton | Nhóm 2</title>
+<style>
+:root{--bg:#080d20;--panel:rgba(18,27,58,.83);--panel2:rgba(24,37,75,.8);--cyan:#63f0e0;--purple:#a78bfa;--pink:#ff79c6;--text:#f2f6ff;--muted:#a7b4d6;--green:#66f2a5;--red:#ff7794;--gold:#ffd782;--line:rgba(151,174,255,.18);--shadow:0 22px 80px rgba(0,0,0,.3)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 12% 8%,rgba(64,107,230,.27),transparent 35%),radial-gradient(ellipse at 86% 16%,rgba(167,87,255,.2),transparent 28%),radial-gradient(ellipse at 50% 100%,rgba(26,205,184,.12),transparent 35%),var(--bg);overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;z-index:-1;border-radius:50%;filter:blur(1px);pointer-events:none}body:before{width:240px;height:240px;border:1px solid rgba(99,240,224,.12);left:-90px;bottom:15%;box-shadow:0 0 70px rgba(99,240,224,.06)}body:after{width:170px;height:170px;border:1px solid rgba(167,139,250,.18);right:-65px;top:45%;box-shadow:0 0 60px rgba(167,139,250,.08)}button,input{font:inherit}button{cursor:pointer}.app{max-width:1120px;width:calc(100% - 32px);margin:0 auto;padding:22px 0 32px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:22px}.brand{display:flex;align-items:center;gap:12px}.logo{height:44px;width:44px;border-radius:15px;background:linear-gradient(135deg,var(--cyan),#6b8cff 65%,var(--purple));display:grid;place-items:center;color:#081125;font-size:23px;box-shadow:0 6px 28px rgba(99,240,224,.18)}.brand-name{font-weight:850;letter-spacing:.03em}.brand-sub{color:var(--muted);font-size:12px;margin-top:3px}.top-actions{display:flex;gap:9px;align-items:center}.pill{border:1px solid var(--line);color:var(--muted);padding:8px 12px;border-radius:999px;background:rgba(12,20,45,.72);font-size:12px}.icon-btn{border:1px solid var(--line);background:rgba(16,25,54,.85);color:var(--text);border-radius:13px;padding:9px 12px}.icon-btn:hover{border-color:var(--cyan);color:var(--cyan)}.shell{position:relative;background:linear-gradient(145deg,rgba(19,29,65,.94),rgba(12,18,42,.93));border:1px solid rgba(158,179,255,.2);border-radius:28px;box-shadow:var(--shadow);overflow:hidden}.shell:before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),var(--purple),var(--pink),transparent);opacity:.85}.screen{display:none;padding:clamp(22px,5vw,48px);animation:enter .35s ease}.screen.active{display:block}@keyframes enter{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:28px;align-items:center}.eyebrow{color:var(--cyan);font-size:12px;text-transform:uppercase;letter-spacing:.17em;font-weight:800;display:flex;align-items:center;gap:9px}.pulse{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(102,242,165,.1)}h1{font-size:clamp(34px,5vw,57px);line-height:1.05;letter-spacing:-.045em;margin:17px 0 16px}.gradient-text{background:linear-gradient(100deg,#6cf5df,#a9bcff 53%,#e4a2ff);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{color:#b9c5e4;font-size:16px;line-height:1.7;max-width:540px}.badges{display:flex;flex-wrap:wrap;gap:8px;margin:23px 0}.tag{border:1px solid var(--line);background:rgba(117,145,255,.07);color:#d5def9;border-radius:11px;padding:8px 10px;font-size:12px}.hero-visual{min-height:325px;display:grid;place-items:center;position:relative}.orbit{width:min(100%,340px);aspect-ratio:1;border:1px solid rgba(99,240,224,.28);border-radius:50%;position:relative;display:grid;place-items:center;box-shadow:inset 0 0 45px rgba(99,240,224,.04),0 0 75px rgba(95,110,255,.08)}.orbit:before,.orbit:after{content:"";position:absolute;inset:12%;border:1px dashed rgba(167,139,250,.4);border-radius:50%;transform:rotate(35deg) scaleY(.66)}.orbit:after{transform:rotate(-35deg) scaleY(.66);border-color:rgba(99,240,224,.38)}.core{width:124px;height:124px;border-radius:34px;background:linear-gradient(145deg,#263f78,#121f49 62%,#41336f);border:1px solid rgba(99,240,224,.45);display:grid;place-items:center;box-shadow:0 0 55px rgba(99,240,224,.2),inset 0 0 25px rgba(167,139,250,.15);animation:float 4s ease-in-out infinite}.core span{font-size:56px;filter:drop-shadow(0 8px 15px rgba(99,240,224,.2))}.orb-label{position:absolute;border-radius:13px;padding:8px 11px;border:1px solid var(--line);background:rgba(10,16,39,.94);font-size:12px;color:#dce6ff;box-shadow:0 10px 28px rgba(0,0,0,.24)}.orb-label small{display:block;color:var(--muted);margin-top:3px}.label-a{top:10%;right:2%}.label-b{bottom:12%;left:1%}.label-c{right:0;bottom:25%}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}.start-controls{display:flex;flex-direction:column;gap:12px;margin-top:27px;max-width:480px}.field-label{color:#dce5ff;font-weight:700;font-size:13px}.name-input{width:100%;background:rgba(5,10,27,.66);border:1px solid rgba(151,174,255,.25);color:var(--text);border-radius:13px;padding:13px 15px;outline:none}.name-input:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(99,240,224,.1)}.btn{border:0;border-radius:14px;padding:13px 18px;font-weight:850;transition:transform .18s,filter .18s,box-shadow .18s}.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}.btn:active{transform:translateY(0)}.btn-primary{color:#071225;background:linear-gradient(100deg,var(--cyan),#91b2ff 67%,#c2a4ff);box-shadow:0 10px 30px rgba(99,240,224,.15)}.btn-secondary{color:var(--text);background:rgba(120,145,240,.1);border:1px solid var(--line)}.btn:disabled{opacity:.35;cursor:not-allowed;transform:none}.fineprint{color:#8695bd;font-size:11px;line-height:1.6}.mission-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}.mini-stat{padding:15px;border:1px solid var(--line);border-radius:16px;background:rgba(9,16,38,.48)}.mini-stat strong{display:block;font-size:19px;color:var(--cyan)}.mini-stat span{font-size:11px;color:var(--muted)}.section-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin-bottom:22px}.section-heading h2{font-size:clamp(24px,4vw,34px);margin:8px 0 0;letter-spacing:-.03em}.subtle{color:var(--muted);font-size:13px;line-height:1.6}.hud{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;margin-bottom:22px}.progress-wrap{min-width:0}.progress-meta{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:var(--muted);margin-bottom:8px}.progress-track{height:8px;border-radius:99px;background:rgba(144,163,229,.13);overflow:hidden}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),#7ca4ff,var(--purple));border-radius:99px;transition:width .35s}.hud-chip{min-width:95px;border:1px solid var(--line);border-radius:15px;padding:10px 13px;background:rgba(8,14,35,.64)}.hud-chip span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.09em}.hud-chip strong{display:block;margin-top:3px;font-size:18px}.timer-chip strong{color:var(--gold)}.timer-chip.urgent{border-color:rgba(255,119,148,.55);animation:blink 1s infinite}.timer-chip.urgent strong{color:var(--red)}@keyframes blink{50%{box-shadow:0 0 0 4px rgba(255,119,148,.08)}}.level-line{display:flex;align-items:center;gap:9px;margin-bottom:14px}.level-number{background:rgba(167,139,250,.15);color:#d5c2ff;border:1px solid rgba(167,139,250,.35);padding:7px 10px;border-radius:10px;font-size:11px;font-weight:800}.level-name{font-size:12px;color:var(--muted)}.question-card{border:1px solid var(--line);border-radius:22px;padding:clamp(20px,4vw,33px);background:linear-gradient(145deg,rgba(25,39,82,.8),rgba(11,18,43,.78))}.question-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--cyan);font-weight:850}.question-text{font-size:clamp(20px,3vw,27px);line-height:1.45;letter-spacing:-.02em;margin:13px 0 23px}.answers{display:grid;grid-template-columns:1fr 1fr;gap:11px}.answer-btn{display:flex;align-items:flex-start;gap:12px;text-align:left;color:#e9eeff;background:rgba(11,18,43,.76);border:1px solid rgba(151,174,255,.19);padding:15px;border-radius:15px;min-height:70px;line-height:1.5;transition:border .18s,background .18s,transform .18s}.answer-btn:hover:not(:disabled){border-color:rgba(99,240,224,.65);background:rgba(63,112,148,.17);transform:translateY(-1px)}.answer-letter{flex:0 0 29px;height:29px;display:grid;place-items:center;border-radius:9px;background:rgba(126,151,241,.13);font-size:12px;font-weight:900;color:#c7d7ff;border:1px solid var(--line)}.answer-btn.correct{background:rgba(42,177,112,.14);border-color:rgba(102,242,165,.78)}.answer-btn.correct .answer-letter{background:var(--green);color:#092119}.answer-btn.incorrect{background:rgba(255,80,121,.1);border-color:rgba(255,119,148,.78)}.answer-btn.incorrect .answer-letter{background:var(--red);color:#300916}.feedback{display:none;margin-top:18px;padding:16px 17px;border-radius:15px;line-height:1.65;font-size:14px}.feedback.show{display:block;animation:enter .25s ease}.feedback.good{border:1px solid rgba(102,242,165,.35);background:rgba(48,173,111,.09)}.feedback.bad{border:1px solid rgba(255,119,148,.33);background:rgba(195,56,95,.08)}.feedback-title{font-weight:900;margin-bottom:5px}.feedback.good .feedback-title{color:var(--green)}.feedback.bad .feedback-title{color:var(--red)}.question-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:20px}.hint{font-size:12px;color:#8998bf;line-height:1.5}.result-layout{display:grid;grid-template-columns:1fr .88fr;gap:22px}.result-card{padding:23px;border:1px solid var(--line);border-radius:21px;background:rgba(8,15,38,.58)}.score-orb{width:148px;height:148px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;text-align:center;border:7px solid rgba(99,240,224,.2);background:radial-gradient(circle,rgba(99,240,224,.13),rgba(129,109,236,.09));box-shadow:0 0 45px rgba(99,240,224,.08)}.score-orb strong{display:block;font-size:35px;letter-spacing:-.05em}.score-orb span{font-size:11px;color:var(--muted)}.result-title{text-align:center;font-size:26px;margin:8px 0}.result-copy{text-align:center;color:var(--muted);line-height:1.6;font-size:13px}.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:20px}.result-stat{text-align:center;border:1px solid var(--line);background:rgba(120,145,240,.055);border-radius:14px;padding:13px 6px}.result-stat strong{display:block;font-size:21px;color:var(--cyan)}.result-stat span{font-size:10px;color:var(--muted)}.leaderboard{margin-top:8px}.leaderboard h3{font-size:18px;margin:0 0 5px}.leaderboard p{font-size:12px;line-height:1.55;color:var(--muted);margin:0 0 15px}.leader-row{display:grid;grid-template-columns:31px minmax(0,1fr) auto;gap:9px;align-items:center;padding:12px 0;border-bottom:1px solid rgba(151,174,255,.1)}.rank{width:27px;height:27px;border-radius:9px;display:grid;place-items:center;background:rgba(124,151,244,.12);font-size:12px;font-weight:900;color:#cad5fa}.rank.gold{background:rgba(255,215,130,.16);color:var(--gold)}.rank-name{font-size:13px;font-weight:750;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rank-sub{font-size:10px;color:var(--muted);margin-top:2px}.rank-score{font-size:14px;font-weight:900;color:var(--cyan)}.empty-rank{padding:20px 0;text-align:center;color:var(--muted);font-size:12px}.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.footer-note{text-align:center;color:#65749a;font-size:10px;margin:15px auto 0;max-width:780px;line-height:1.7}.source-note{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);color:#8b9bc2;font-size:10px;line-height:1.6}.source-note a{color:#9dece5;text-decoration:none}.source-note a:hover{text-decoration:underline}.confetti{position:fixed;width:8px;height:12px;top:-20px;pointer-events:none;z-index:10;animation:fall 2.8s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(680deg);opacity:.1}}
+@media(max-width:780px){.hero-grid{grid-template-columns:1fr}.hero-visual{min-height:260px;grid-row:1}.orbit{max-width:250px}.core{width:100px;height:100px;border-radius:27px}.core span{font-size:44px}.label-a{right:-4%}.label-b{left:-4%}.label-c{right:-3%;bottom:17%}.hero-grid .hero-copy{grid-row:2}.result-layout{grid-template-columns:1fr}.hud{grid-template-columns:1fr auto}.hud .progress-wrap{grid-column:1/-1;grid-row:2}.question-footer{align-items:flex-start;flex-direction:column}.question-footer .btn{width:100%}}
+@media(max-width:520px){.app{width:calc(100% - 20px);padding-top:12px}.topbar{align-items:flex-start}.brand-sub{max-width:155px}.pill{display:none}.screen{padding:20px 16px}.shell{border-radius:22px}.answers{grid-template-columns:1fr}.answer-btn{min-height:unset;padding:12px}.question-text{font-size:20px}.hud-chip{min-width:83px;padding:9px}.mission-strip{gap:7px}.mini-stat{padding:11px 8px}.mini-stat strong{font-size:16px}.mini-stat span{font-size:10px}.hero-visual{min-height:235px}.orbit{max-width:220px}.orb-label{font-size:10px;padding:7px 8px}.result-card{padding:17px}.stat-grid{gap:6px}.result-stat strong{font-size:18px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><div class="logo">⚗</div><div><div class="brand-name">PROTON LAB <span style="color:var(--cyan)">/ Nhóm 2</span></div><div class="brand-sub">Game tương tác Hóa học · Lớp 11</div></div></div>
+    <div class="top-actions"><span class="pill">● HỆ THỐNG SẴN SÀNG</span><button class="icon-btn" id="soundToggle" aria-label="Bật hoặc tắt âm thanh">♫ Âm thanh: bật</button></div>
+  </header>
+  <main class="shell">
+    <section class="screen active" id="startScreen">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse"></span> NHIỆM VỤ KHẨN CẤP · PROTON LAB</div>
+          <h1>Giải cứu phòng lab bằng <span class="gradient-text">proton!</span></h1>
+          <p class="lead">Hệ thống cân bằng acid–base đang gặp sự cố. Đồng hành cùng Proton-7, vượt qua 4 trạm thí nghiệm và chứng minh rằng bạn đã nắm vững thuyết Brønsted–Lowry.</p>
+          <div class="badges"><span class="tag">🧪 20 câu hỏi</span><span class="tag">⏱ 25 giây/câu</span><span class="tag">✨ 4 trạm nhiệm vụ</span><span class="tag">🔊 Hiệu ứng âm thanh</span></div>
+          <div class="start-controls">
+            <label class="field-label" for="playerName">Tên nhà nghiên cứu</label>
+            <input class="name-input" id="playerName" maxlength="22" placeholder="Nhập tên hoặc biệt danh của bạn" autocomplete="nickname">
+            <button class="btn btn-primary" id="startBtn">BẮT ĐẦU NHIỆM VỤ <span aria-hidden="true">→</span></button>
+            <div class="fineprint">Mỗi câu đúng được 10 điểm. Chọn đáp án để xem phản hồi và lời giải thích. Hết giờ sẽ tự chuyển sang phần giải thích.</div>
+          </div>
+          <div class="mission-strip"><div class="mini-stat"><strong>200</strong><span>Điểm tối đa</span></div><div class="mini-stat"><strong>4</strong><span>Trạm thí nghiệm</span></div><div class="mini-stat"><strong>TOP 5</strong><span>Bảng xếp hạng</span></div></div>
+        </div>
+        <div class="hero-visual" aria-label="Hình minh họa phân tử và nhà nghiên cứu Proton-7"><div class="orbit"><div class="core"><span>🧑‍🔬</span></div><div class="orb-label label-a">H⁺ <small>Proton</small></div><div class="orb-label label-b">AXIT <small>Cho proton</small></div><div class="orb-label label-c">BASE <small>Nhận proton</small></div></div></div>
+      </div>
+      <div class="source-note">Kiến thức trong game tập trung vào định nghĩa acid/base Brønsted–Lowry, sự chuyển proton, cặp liên hợp và tính lưỡng proton của nước. Game chạy độc lập trên trình duyệt, không cần đăng nhập.</div>
+    </section>
+
+    <section class="screen" id="quizScreen">
+      <div class="section-heading"><div><div class="eyebrow"><span class="pulse"></span> ĐANG THỰC HIỆN NHIỆM VỤ</div><h2>Phân tích phản ứng</h2><div class="subtle" id="welcomeLine">Nhà nghiên cứu, hãy tập trung nhé!</div></div><div class="pill" id="playerPill">🧑‍🔬 Nhà nghiên cứu</div></div>
+      <div class="hud">
+        <div class="progress-wrap"><div class="progress-meta"><span id="progressLabel">Câu 1/20</span><span id="progressPct">5% hoàn thành</span></div><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div></div>
+        <div class="hud-chip"><span>Điểm hiện tại</span><strong id="scoreValue">0 <small style="font-size:10px;color:var(--muted)">đ</small></strong></div>
+        <div class="hud-chip timer-chip" id="timerChip"><span>Thời gian</span><strong><span id="timerValue" style="display:inline;color:inherit;font-size:inherit">25</span><small style="font-size:10px;color:var(--muted)"> giây</small></strong></div>
+      </div>
+      <div class="level-line"><span class="level-number" id="levelNumber">TRẠM 01</span><span class="level-name" id="levelName">Khởi động proton</span><span class="tag" id="difficultyTag" style="margin-left:auto">NHẬN BIẾT</span></div>
+      <article class="question-card">
+        <div class="question-kicker" id="questionKicker">HỒ SƠ PHẢN ỨNG #001</div>
+        <h3 class="question-text" id="questionText">Câu hỏi sẽ xuất hiện ở đây.</h3>
+        <div class="answers" id="answers"></div>
+        <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+        <div class="question-footer"><div class="hint" id="questionHint">Chọn một phương án A–D. Mỗi câu đúng +10 điểm.</div><button class="btn btn-primary" id="nextBtn" disabled>CÂU TIẾP THEO →</button></div>
+      </article>
+    </section>
+
+    <section class="screen" id="resultScreen">
+      <div class="section-heading"><div><div class="eyebrow"><span class="pulse"></span> BÁO CÁO NHIỆM VỤ</div><h2>Kết quả phòng thí nghiệm</h2><div class="subtle">Hệ thống đã được ổn định. Cùng xem thành tích của bạn nhé!</div></div><div class="pill">🏁 NHIỆM VỤ HOÀN TẤT</div></div>
+      <div class="result-layout">
+        <div class="result-card">
+          <div class="score-orb"><div><strong id="finalScore">0</strong><span> / 200 ĐIỂM</span></div></div>
+          <h3 class="result-title" id="resultTitle">Nhà nghiên cứu tiềm năng!</h3>
+          <p class="result-copy" id="resultMessage">Bạn đã hoàn thành nhiệm vụ.</p>
+          <div class="stat-grid"><div class="result-stat"><strong id="correctCount">0/20</strong><span>CÂU ĐÚNG</span></div><div class="result-stat"><strong id="accuracyValue">0%</strong><span>ĐỘ CHÍNH XÁC</span></div><div class="result-stat"><strong id="missedCount">0</strong><span>HẾT GIỜ</span></div></div>
+          <div class="result-actions"><button class="btn btn-primary" id="replayBtn">↻ CHƠI LẠI</button><button class="btn btn-secondary" id="reviewBtn">XEM LẠI KIẾN THỨC</button></div>
+          <div class="source-note">Bảng xếp hạng chỉ lưu cục bộ trong trình duyệt đang dùng, không gửi tên hay điểm số lên máy chủ. Nếu trình duyệt chặn lưu trữ với file HTML, bảng xếp hạng có thể chỉ tồn tại trong phiên hiện tại.</div>
+        </div>
+        <div class="result-card leaderboard"><h3>🏆 Bảng xếp hạng · Top 5</h3><p>Những thành tích cao nhất được lưu trên trình duyệt này.</p><div id="leaderboardRows"></div><div class="source-note">Mẹo học nhanh: hãy xác định chất nào cho H⁺, chất nào nhận H⁺, rồi tìm các cặp liên hợp chênh nhau một proton.</div></div>
+      </div>
+    </section>
+  </main>
+  <div class="footer-note">SẢN PHẨM HỌC TẬP · NHÓM 2 · HÓA HỌC 11 · “PROMPT → CREATE → TEST → FIX → IMPROVE”<br>Tham khảo kiến thức: OpenStax Chemistry 2e, mục 14.1; Khan Academy, Brønsted–Lowry acid-base theory.</div>
+</div>
+<script>
+'use strict';
+const QUESTIONS = [{"level": 1, "type": "Nhận biết", "q": "Theo thuyết Brønsted–Lowry, acid là chất…", "options": ["Nhận proton H⁺", "Cho proton H⁺", "Luôn tạo ra OH⁻ trong nước", "Luôn có nguyên tử oxygen"], "a": 1, "explain": "Acid Brønsted–Lowry là chất cho proton H⁺ cho một chất khác."}, {"level": 1, "type": "Nhận biết", "q": "Theo thuyết Brønsted–Lowry, base là chất…", "options": ["Cho electron tự do trong mọi phản ứng", "Cho proton H⁺", "Nhận proton H⁺", "Luôn làm quỳ tím hóa xanh"], "a": 2, "explain": "Base Brønsted–Lowry nhận proton H⁺ từ acid trong phản ứng acid–base."}, {"level": 1, "type": "Nhận biết", "q": "Trong phản ứng HCl + H₂O → H₃O⁺ + Cl⁻, chất nào là axit Brønsted–Lowry?", "options": ["H₂O", "H₃O⁺", "Cl⁻", "HCl"], "a": 3, "explain": "HCl cho H⁺ cho H₂O, tạo H₃O⁺ và Cl⁻; vì cho proton nên HCl là axit."}, {"level": 1, "type": "Nhận biết", "q": "Trong phản ứng HCl + H₂O → H₃O⁺ + Cl⁻, chất nào là base Brønsted–Lowry?", "options": ["H₂O", "HCl", "H₃O⁺", "Cl⁻"], "a": 0, "explain": "H₂O nhận proton H⁺ từ HCl và chuyển thành H₃O⁺, nên H₂O là base trong phản ứng này."}, {"level": 1, "type": "Nhận biết", "q": "Base liên hợp của HCl là chất nào?", "options": ["H₃O⁺", "Cl⁻", "OH⁻", "H₂O"], "a": 1, "explain": "Sau khi HCl cho một proton H⁺, phần còn lại là Cl⁻; đó là base liên hợp của HCl."}, {"level": 2, "type": "Thông hiểu", "q": "Acid liên hợp của NH₃ là ion nào?", "options": ["NH₂⁻", "NO₃⁻", "NH₄⁺", "OH⁻"], "a": 2, "explain": "NH₃ nhận thêm một proton H⁺ sẽ tạo thành NH₄⁺, là acid liên hợp của NH₃."}, {"level": 2, "type": "Thông hiểu", "q": "Hai chất trong một cặp acid–base liên hợp theo Brønsted–Lowry khác nhau bởi…", "options": ["Một nguyên tử oxygen", "Một proton H⁺", "Một phân tử nước bắt buộc", "Một electron ở mọi trường hợp"], "a": 1, "explain": "Hai chất trong cặp liên hợp chỉ chênh nhau một proton H⁺: acid mất H⁺ tạo base liên hợp, còn base nhận H⁺ tạo acid liên hợp."}, {"level": 2, "type": "Thông hiểu", "q": "Trong phản ứng NH₃ + H₂O ⇌ NH₄⁺ + OH⁻, H₂O đóng vai trò gì theo chiều thuận?", "options": ["Acid vì cho H⁺", "Base vì nhận H⁺", "Không tham gia chuyển proton", "Chất xúc tác"], "a": 0, "explain": "H₂O cho H⁺ cho NH₃, tạo OH⁻; vì cho proton nên nước đóng vai trò acid trong chiều thuận."}, {"level": 2, "type": "Thông hiểu", "q": "Trong phản ứng NH₃ + H₂O ⇌ NH₄⁺ + OH⁻, cặp acid–base liên hợp nào đúng?", "options": ["NH₃ và OH⁻", "NH₄⁺ và H₂O", "NH₃ và NH₄⁺", "NH₄⁺ và OH⁻"], "a": 2, "explain": "NH₃ nhận H⁺ tạo NH₄⁺; hai chất NH₃/NH₄⁺ là một cặp base/acid liên hợp."}, {"level": 2, "type": "Thông hiểu", "q": "Trong phản ứng NH₃ + H₂O ⇌ NH₄⁺ + OH⁻, OH⁻ là…", "options": ["Acid liên hợp của NH₃", "Base liên hợp của H₂O", "Acid liên hợp của H₂O", "Base liên hợp của NH₃"], "a": 1, "explain": "H₂O cho proton H⁺ và biến thành OH⁻; do đó OH⁻ là base liên hợp của H₂O."}, {"level": 3, "type": "Thông hiểu", "q": "Một chất có thể vừa cho vừa nhận proton tùy phản ứng được gọi là chất…", "options": ["Chỉ có tính acid", "Chỉ có tính base", "Lưỡng tính theo Brønsted–Lowry", "Trơ trong mọi phản ứng"], "a": 2, "explain": "Chất có thể cho hoặc nhận proton được gọi là lưỡng tính (amphiprotic). Nước là một ví dụ điển hình."}, {"level": 3, "type": "Thông hiểu", "q": "Phản ứng nào dưới đây thể hiện sự chuyển proton theo thuyết Brønsted–Lowry?", "options": ["NaCl → Na⁺ + Cl⁻", "NH₃ + H₂O ⇌ NH₄⁺ + OH⁻", "2H₂ + O₂ → 2H₂O", "CaCO₃ → CaO + CO₂"], "a": 1, "explain": "Trong phản ứng NH₃ + H₂O, proton được chuyển từ H₂O sang NH₃, tạo NH₄⁺ và OH⁻."}, {"level": 3, "type": "Thông hiểu", "q": "Xét HCO₃⁻ + H₂O ⇌ CO₃²⁻ + H₃O⁺. Trong chiều thuận, HCO₃⁻ đóng vai trò gì?", "options": ["Axit vì cho H⁺", "Base vì nhận H⁺", "Không phải acid hay base", "Chất oxi hóa"], "a": 0, "explain": "HCO₃⁻ mất một proton và trở thành CO₃²⁻, nên HCO₃⁻ là acid trong phản ứng này."}, {"level": 3, "type": "Thông hiểu", "q": "Xét HCO₃⁻ + H₂O ⇌ H₂CO₃ + OH⁻. Trong chiều thuận, HCO₃⁻ đóng vai trò gì?", "options": ["Acid vì cho H⁺", "Base vì nhận H⁺", "Chất chỉ thị màu", "Không tham gia phản ứng"], "a": 1, "explain": "HCO₃⁻ nhận proton từ H₂O để tạo H₂CO₃, vì vậy HCO₃⁻ là base trong phản ứng này."}, {"level": 3, "type": "Thông hiểu", "q": "Cặp nào là cặp acid–base liên hợp?", "options": ["H₂O và H₂O₂", "H₂O và OH⁻", "Na⁺ và Cl⁻", "O₂ và O₃"], "a": 1, "explain": "H₂O và OH⁻ chỉ khác nhau một proton H⁺; H₂O có thể cho H⁺ để tạo OH⁻."}, {"level": 4, "type": "Vận dụng", "q": "Xét HSO₄⁻ + H₂O ⇌ H₃O⁺ + SO₄²⁻. Base liên hợp của HSO₄⁻ là chất nào?", "options": ["H₃O⁺", "H₂O", "SO₄²⁻", "OH⁻"], "a": 2, "explain": "HSO₄⁻ cho H⁺ và trở thành SO₄²⁻. Vì vậy SO₄²⁻ là base liên hợp của HSO₄⁻."}, {"level": 4, "type": "Vận dụng", "q": "Trong phương trình HCN + H₂O ⇌ H₃O⁺ + CN⁻, H₂O là base vì…", "options": ["Nước cho H⁺ cho HCN", "Nước nhận H⁺ từ HCN", "Nước tạo ra CN⁻ bằng cách phân hủy", "Nước không thay đổi"], "a": 1, "explain": "HCN cho proton cho H₂O; H₂O nhận proton tạo H₃O⁺, nên là base theo Brønsted–Lowry."}, {"level": 4, "type": "Vận dụng", "q": "Trong phản ứng NH₄⁺ + OH⁻ ⇌ NH₃ + H₂O, chất nào là acid Brønsted–Lowry?", "options": ["OH⁻", "NH₃", "NH₄⁺", "H₂O"], "a": 2, "explain": "NH₄⁺ cho H⁺ cho OH⁻, tạo NH₃ và H₂O. Chất cho proton là acid."}, {"level": 4, "type": "Vận dụng", "q": "Xét X⁻ + H₂O ⇌ HX + OH⁻. Nếu phản ứng diễn ra như phương trình đã viết, X⁻ đóng vai trò gì?", "options": ["Acid vì cho H⁺", "Base vì nhận H⁺", "Acid liên hợp của HX", "Chất không tham gia chuyển proton"], "a": 1, "explain": "X⁻ nhận proton từ H₂O để tạo HX; vì nhận H⁺ nên X⁻ là base, còn H₂O là acid trong chiều thuận."}, {"level": 4, "type": "Vận dụng", "q": "Xét H₂PO₄⁻ + H₂O ⇌ H₃O⁺ + HPO₄²⁻. Cặp acid–base liên hợp nào đúng?", "options": ["H₂PO₄⁻/HPO₄²⁻ và H₂O/H₃O⁺", "H₂PO₄⁻/H₃O⁺ và H₂O/HPO₄²⁻", "H₂PO₄⁻/H₂O và H₃O⁺/HPO₄²⁻", "H₃O⁺/H₂O và HPO₄²⁻/H₂PO₄⁻ chỉ là một cặp"], "a": 0, "explain": "H₂PO₄⁻ cho H⁺ tạo HPO₄²⁻; H₂O nhận H⁺ tạo H₃O⁺. Vì vậy có hai cặp liên hợp: H₂PO₄⁻/HPO₄²⁻ và H₂O/H₃O⁺."}];
+const LEVELS = [
+  {name:'Khởi động proton',short:'TRẠM 01'},
+  {name:'Tìm cặp liên hợp',short:'TRẠM 02'},
+  {name:'Giải mã phản ứng',short:'TRẠM 03'},
+  {name:'Thử thách chuyên gia',short:'TRẠM 04'}
+];
+const $ = (id) => document.getElementById(id);
+let playerName = 'Nhà nghiên cứu';
+let index = 0;
+let score = 0;
+let correct = 0;
+let timedOut = 0;
+let answered = false;
+let timeLeft = 25;
+let timerId = null;
+let soundOn = true;
+let fallbackBoard = [];
+let lastResult = null;
+
+function showScreen(id){ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active')); $(id).classList.add('active'); window.scrollTo({top:0,behavior:'smooth'}); }
+function safeName(value){ return (value || '').trim().replace(/[<>]/g,'').slice(0,22) || 'Nhà nghiên cứu'; }
+function sound(kind){
+  if(!soundOn) return;
+  try{
+    const Ctx = window.AudioContext || window.webkitAudioContext;
+    if(!Ctx) return;
+    const ctx = new Ctx(); const osc = ctx.createOscillator(); const gain = ctx.createGain();
+    osc.connect(gain); gain.connect(ctx.destination);
+    const now = ctx.currentTime;
+    const ok = kind === 'good';
+    osc.type = ok ? 'sine' : 'triangle';
+    osc.frequency.setValueAtTime(ok ? 660 : 240, now);
+    osc.frequency.exponentialRampToValueAtTime(ok ? 990 : 170, now + .13);
+    gain.gain.setValueAtTime(.0001, now); gain.gain.exponentialRampToValueAtTime(.08, now + .015); gain.gain.exponentialRampToValueAtTime(.0001, now + .19);
+    osc.start(now); osc.stop(now + .2); osc.onended = ()=>ctx.close();
+  }catch(e){ /* Âm thanh không khả dụng thì game vẫn chơi bình thường. */ }
+}
+function stopTimer(){ if(timerId !== null){clearInterval(timerId);timerId=null;} }
+function startGame(){
+  playerName = safeName($('playerName').value);
+  index = 0; score = 0; correct = 0; timedOut = 0; answered = false; lastResult = null;
+  $('playerPill').textContent = '🧑‍🔬 ' + playerName;
+  $('welcomeLine').textContent = 'Nhà nghiên cứu ' + playerName + ', hãy tập trung nhé!';
+  $('scoreValue').innerHTML = '0 <small style="font-size:10px;color:var(--muted)">đ</small>';
+  showScreen('quizScreen'); renderQuestion();
+}
+function renderQuestion(){
+  stopTimer(); answered = false; timeLeft = 25;
+  const q = QUESTIONS[index];
+  const level = LEVELS[q.level-1];
+  $('progressLabel').textContent = `Câu ${index+1}/${QUESTIONS.length}`;
+  $('progressPct').textContent = `${Math.round(((index+1)/QUESTIONS.length)*100)}% hoàn thành`;
+  $('progressFill').style.width = `${((index+1)/QUESTIONS.length)*100}%`;
+  $('scoreValue').innerHTML = `${score} <small style="font-size:10px;color:var(--muted)">đ</small>`;
+  $('levelNumber').textContent = level.short;
+  $('levelName').textContent = level.name;
+  $('difficultyTag').textContent = q.type.toUpperCase();
+  $('questionKicker').textContent = `HỒ SƠ PHẢN ỨNG #${String(index+1).padStart(3,'0')}`;
+  $('questionText').textContent = q.q;
+  $('feedback').className = 'feedback'; $('feedback').textContent = '';
+  $('questionHint').textContent = 'Chọn một phương án A–D. Mỗi câu đúng +10 điểm.';
+  $('nextBtn').disabled = true;
+  $('nextBtn').textContent = index === QUESTIONS.length-1 ? 'XEM KẾT QUẢ →' : 'CÂU TIẾP THEO →';
+  $('timerChip').classList.remove('urgent');
+  const answers = $('answers'); answers.innerHTML = '';
+  q.options.forEach((option,i)=>{
+    const btn = document.createElement('button'); btn.type='button'; btn.className='answer-btn';
+    const letter = document.createElement('span'); letter.className='answer-letter'; letter.textContent=String.fromCharCode(65+i);
+    const label = document.createElement('span'); label.textContent=option;
+    btn.append(letter,label); btn.addEventListener('click',()=>answerQuestion(i,false)); answers.appendChild(btn);
+  });
+  $('timerValue').textContent = timeLeft;
+  timerId = setInterval(()=>{
+    if(answered){stopTimer();return;}
+    timeLeft--; $('timerValue').textContent = timeLeft;
+    if(timeLeft <= 7) $('timerChip').classList.add('urgent');
+    if(timeLeft <= 0) answerQuestion(null,true);
+  },1000);
+}
+function answerQuestion(choice, timeout){
+  if(answered) return;
+  answered = true; stopTimer();
+  const q = QUESTIONS[index]; const buttons = [...$('answers').querySelectorAll('.answer-btn')];
+  buttons.forEach((btn,i)=>{btn.disabled=true;if(i===q.a)btn.classList.add('correct');if(choice===i && i!==q.a)btn.classList.add('incorrect');});
+  const isCorrect = choice === q.a;
+  const feedback = $('feedback');
+  if(isCorrect){correct++;score+=10;feedback.className='feedback show good';feedback.innerHTML='<div class="feedback-title">✓ Chính xác! +10 điểm</div><div></div>';sound('good');}
+  else{
+    if(timeout) timedOut++;
+    feedback.className='feedback show bad';
+    const title = timeout ? '⌛ Hết giờ rồi!' : '↻ Chưa chính xác';
+    feedback.innerHTML=`<div class="feedback-title">${title} Đáp án đúng: ${String.fromCharCode(65+q.a)}. ${escapeHTML(q.options[q.a])}</div><div></div>`;
+    sound('bad');
+  }
+  feedback.lastElementChild.textContent = q.explain;
+  $('scoreValue').innerHTML = `${score} <small style="font-size:10px;color:var(--muted)">đ</small>`;
+  $('questionHint').textContent = isCorrect ? 'Tốt lắm! Đọc phần giải thích rồi tiếp tục.' : 'Hãy đọc lời giải thích để ghi nhớ cách xác định chất cho/nhận H⁺.';
+  $('nextBtn').disabled=false;
+}
+function escapeHTML(s){return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');}
+function nextQuestion(){if(!answered)return;if(index<QUESTIONS.length-1){index++;renderQuestion();}else finishGame();}
+function getBoard(){
+  try{const stored=localStorage.getItem('protonLabGroup2Board');if(stored){const parsed=JSON.parse(stored);if(Array.isArray(parsed))return parsed;}}catch(e){}
+  return fallbackBoard;
+}
+function saveScore(){
+  const board=getBoard();
+  const nameKey=playerName.toLocaleLowerCase('vi-VN');
+  const existing=board.find(r=>(r.name||'').toLocaleLowerCase('vi-VN')===nameKey);
+  const record={name:playerName,score,correct,date:new Date().toISOString()};
+  if(existing){if(score>existing.score || (score===existing.score && correct>existing.correct)){Object.assign(existing,record);}}
+  else board.push(record);
+  board.sort((a,b)=>b.score-a.score || b.correct-a.correct || (a.name||'').localeCompare(b.name||'','vi'));
+  const trimmed=board.slice(0,5); fallbackBoard=trimmed;
+  try{localStorage.setItem('protonLabGroup2Board',JSON.stringify(trimmed));}catch(e){/* Dự phòng khi lưu trữ bị chặn. */}
+  return trimmed;
+}
+function finishGame(){
+  stopTimer();
+  const board=saveScore(); lastResult={score,correct,timedOut,name:playerName};
+  $('finalScore').textContent=score;
+  $('correctCount').textContent=`${correct}/20`;
+  $('accuracyValue').textContent=`${Math.round(correct/20*100)}%`;
+  $('missedCount').textContent=timedOut;
+  let title='Nhà nghiên cứu tiềm năng!'; let message='Bạn đã hoàn thành cả 4 trạm. Hãy xem lại những câu chưa đúng để củng cố kiến thức.';
+  if(score>=180){title='🏆 Bậc thầy proton!';message='Xuất sắc! Bạn hiểu rất chắc cách nhận diện acid, base và các cặp liên hợp.';}
+  else if(score>=140){title='✨ Chuyên gia phòng lab!';message='Kết quả rất tốt! Chỉ cần rà lại vài điểm nhỏ là bạn có thể chinh phục trọn bộ.';}
+  else if(score>=100){title='🧪 Nhà nghiên cứu triển vọng!';message='Bạn đã nắm được nhiều ý chính. Hãy ôn lại chiều chuyển proton và cặp liên hợp.';}
+  else {title='🔬 Bắt đầu từ nền tảng nhé!';message='Không sao cả! Đọc lời giải từng câu và chơi lại để tiến bộ dần. Sai lầm là dữ liệu cho lần thử tiếp theo.';}
+  $('resultTitle').textContent=title; $('resultMessage').textContent=message;
+  renderBoard(board); showScreen('resultScreen'); if(score>=140)makeConfetti();
+}
+function renderBoard(board){
+  const host=$('leaderboardRows');host.innerHTML='';
+  if(!board.length){host.innerHTML='<div class="empty-rank">Chưa có thành tích. Hãy là người đầu tiên!</div>';return;}
+  board.slice(0,5).forEach((r,i)=>{
+    const row=document.createElement('div');row.className='leader-row';
+    const rank=document.createElement('div');rank.className='rank'+(i===0?' gold':'');rank.textContent=String(i+1);
+    const info=document.createElement('div');const name=document.createElement('div');name.className='rank-name';name.textContent=r.name||'Nhà nghiên cứu';
+    const sub=document.createElement('div');sub.className='rank-sub';sub.textContent=`${r.correct||0}/20 câu đúng`;
+    info.append(name,sub);const points=document.createElement('div');points.className='rank-score';points.textContent=`${r.score||0}đ`;
+    row.append(rank,info,points);host.append(row);
+  });
+}
+function makeConfetti(){
+  const colors=['#63f0e0','#a78bfa','#ff79c6','#ffd782','#66f2a5'];
+  for(let i=0;i<34;i++){const el=document.createElement('div');el.className='confetti';el.style.left=Math.random()*100+'vw';el.style.background=colors[i%colors.length];el.style.animationDelay=Math.random()*.6+'s';el.style.transform=`rotate(${Math.random()*180}deg)`;document.body.appendChild(el);setTimeout(()=>el.remove(),3400);}
+}
+function reviewKnowledge(){
+  const text='ÔN TẬP NHANH — THUYẾT BRØNSTED–LOWRY\n\n• Acid: chất cho proton H⁺.\n• Base: chất nhận proton H⁺.\n• Acid sau khi mất H⁺ tạo base liên hợp. Base sau khi nhận H⁺ tạo acid liên hợp.\n• Hai chất trong một cặp liên hợp chênh nhau một proton H⁺.\n• Nước có thể vừa cho vừa nhận proton tùy chất phản ứng.\n• Ví dụ: HCl + H₂O → H₃O⁺ + Cl⁻; HCl/Cl⁻ là một cặp liên hợp, H₂O/H₃O⁺ là cặp còn lại.\n• Ví dụ: NH₃ + H₂O ⇌ NH₄⁺ + OH⁻; NH₃/NH₄⁺ và H₂O/OH⁻ là hai cặp liên hợp.';
+  alert(text);
+}
+$('startBtn').addEventListener('click',startGame);
+$('playerName').addEventListener('keydown',e=>{if(e.key==='Enter')startGame();});
+$('nextBtn').addEventListener('click',nextQuestion);
+$('replayBtn').addEventListener('click',()=>{showScreen('startScreen');$('playerName').value=playerName;});
+$('reviewBtn').addEventListener('click',reviewKnowledge);
+$('soundToggle').addEventListener('click',()=>{soundOn=!soundOn;$('soundToggle').textContent=soundOn?'♫ Âm thanh: bật':'♫ Âm thanh: tắt';if(soundOn)sound('good');});
+</script>
+</body>
+</html>
